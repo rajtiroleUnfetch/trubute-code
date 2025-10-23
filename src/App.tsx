@@ -10,7 +10,7 @@ import {
   Button,
   Box,
   TextField,
-  IconButton
+  IconButton,
 } from "@mui/material";
 import { Search } from "@mui/icons-material";
 
@@ -20,17 +20,17 @@ import HeroSection from "./components/HeroSection";
 import ObituaryList from "./components/ObituaryList";
 import MakeWebTrubuteForm from "./components/makeWebTrubuteForm";
 import { useNavigate } from "react-router-dom";
+import MemorialForm from "./components/MemorialForm";
 
 const App: React.FC = () => {
   const [search, setSearch] = useState("");
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handleContinue = () => {
-  // Your validation or API logic here
-  navigate("/plan");
-};
-
+  const handleContinue = () => {
+    // Your validation or API logic here
+    navigate("/plan");
+  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,58 +64,57 @@ const handleContinue = () => {
             onClose={() => setOpenForm(false)}
             onSubmit={handleCreateTribute}
           />
-      <Box
-  component="form"
-  onSubmit={handleSearch}
-  sx={{
-    display: "flex",
-    alignItems: "center",
-    backgroundColor: "#ffffff",
-    borderRadius: 5,
-    boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-    overflow: "hidden",
-    transition: "all 0.3s ease",
-    "&:hover": {
-      boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
-    },
-  }}
->
-  <TextField
-    size="small"
-    variant="outlined"
-    placeholder="Search obituaries..."
-    value={search}
-    onChange={(e) => setSearch(e.target.value)}
-    InputProps={{
-      disableUnderline: true,
-      sx: {
-        border: "none",
-        "& fieldset": { border: "none" },
-        px: 2,
-        fontSize: "0.95rem",
-      },
-    }}
-    sx={{
-      flexGrow: 1,
-      backgroundColor: "transparent",
-    }}
-  />
-  <IconButton
-    type="submit"
-    sx={{
-      backgroundColor: "#1565c0",
-      color: "#fff",
-      borderRadius: 0,
-      px: 2.5,
-      "&:hover": {
-        backgroundColor: "#0d47a1",
-      },
-    }}
-  >
-    <Search />
-  </IconButton>
-</Box>
-
+          <Box
+            component="form"
+            onSubmit={handleSearch}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              backgroundColor: "#ffffff",
+              borderRadius: 5,
+              boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+              overflow: "hidden",
+              transition: "all 0.3s ease",
+              "&:hover": {
+                boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+              },
+            }}
+          >
+            <TextField
+              size="small"
+              variant="outlined"
+              placeholder="Search obituaries..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              InputProps={{
+                disableUnderline: true,
+                sx: {
+                  border: "none",
+                  "& fieldset": { border: "none" },
+                  px: 2,
+                  fontSize: "0.95rem",
+                },
+              }}
+              sx={{
+                flexGrow: 1,
+                backgroundColor: "transparent",
+              }}
+            />
+            <IconButton
+              type="submit"
+              sx={{
+                backgroundColor: "#1565c0",
+                color: "#fff",
+                borderRadius: 0,
+                px: 2.5,
+                "&:hover": {
+                  backgroundColor: "#0d47a1",
+                },
+              }}
+            >
+              <Search />
+            </IconButton>
+          </Box>
 
           <Button
             variant="contained"
@@ -127,7 +126,8 @@ const handleContinue = () => {
           </Button>
         </Toolbar>
       </AppBar>
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <MemorialForm />
       <ObituaryList />
       {/* ------------------ HERO SECTION ------------------ */}
       <Box

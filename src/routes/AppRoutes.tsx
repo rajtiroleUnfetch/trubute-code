@@ -1,12 +1,12 @@
 // src/routes/AppRoutes.tsx
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CreateTrubutePage from "../pages/CreateTrubutePage";
+import { CreateTributePage } from "../pages/CreateTrubutePage";
 import App from "../App";
 import NotFound from "../pages/NotFound";
+import MemorialPage from "../pages/MemorialPage";
 
 // --- Import your pages ---
-
 
 const AppRoutes: React.FC = () => {
   return (
@@ -17,7 +17,9 @@ const AppRoutes: React.FC = () => {
 
         {/* Tribute creation flow */}
         {/* <Route path="/create-memorial" element={<CreateMemorialFor />} /> */}
-        <Route path="/create-trubute" element={<CreateTrubutePage />} />
+        <Route path="/create-trubute" element={<CreateTributePage />} />
+        <Route path="/memorial/:website" element={<MemorialPage />} />
+
         {/* <Route path="/plan" element={<ChoosePlan />} />
         <Route path="/privacy" element={<PrivacyOptions />} /> */}
 
