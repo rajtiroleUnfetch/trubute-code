@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -32,4 +32,4 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploy to S3 Bucket (DEV)
-        run: aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET }} --delete
+        run: aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET }} --delete
