@@ -167,26 +167,7 @@ const App: React.FC = () => {
           Featured Tributes
         </Typography>
         <CarouselCards />
-        {/* <Slider {...sliderSettings}>
-          {mockTributes.map((item) => (
-            <Card key={item.id} sx={{ mx: 2 }}>
-              <CardMedia
-                component="img"
-                image={item.image}
-                alt={item.name}
-                sx={{ height: 300, objectFit: "cover" }}
-              />
-              <CardContent>
-                <Typography variant="h5" color="primary" fontWeight={600}>
-                  {item.name}
-                </Typography>
-                <Typography variant="body1" color="text.secondary">
-                  {item.message}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
-        </Slider> */}
+     
       </Container>
 
       {/* ------------------ ABOUT SECTION ------------------ */}
@@ -204,8 +185,6 @@ const App: React.FC = () => {
           <Typography variant="body1" align="center" color="text.secondary">
             Trubute.com is the largest online obituary and memorial platform,
             helping families share tributes and preserve cherished memories.
-            Whether you’re celebrating a life or connecting with others, our
-            mission is to ensure every story lives on.
           </Typography>
         </Container>
       </Box>
