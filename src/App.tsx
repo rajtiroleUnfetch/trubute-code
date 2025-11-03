@@ -184,7 +184,7 @@ const App: React.FC = () => {
           </Typography>
           <Typography variant="body1" align="center" color="text.secondary">
             Trubute.com is the largest online obituary and memorial platform,
-            helping families share tributes and preserve cherished memories. testing
+            helping families share tributes and preserve cherished memories.
           </Typography>
         </Container>
       </Box>
@@ -200,7 +200,7 @@ const App: React.FC = () => {
         }}
       >
         <Typography variant="body2">
-          © {new Date().getFullYear()} Trubute Tribute. All rights reserved.
+          © {new Date().getFullYear()} Trubute.com All rights reserved.
         </Typography>
       </Box>
     </ThemeProvider>
