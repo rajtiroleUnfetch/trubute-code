@@ -5,6 +5,7 @@ import { CreateTributePage } from "../pages/CreateTrubutePage";
 import App from "../App";
 import NotFound from "../pages/NotFound";
 import MemorialPage from "../pages/MemorialPage";
+import ViewMemorialPage from "../pages/ViewMemorialPage";
 
 // --- Import your pages ---
 
@@ -19,7 +20,8 @@ const AppRoutes: React.FC = () => {
         {/* <Route path="/create-memorial" element={<CreateMemorialFor />} /> */}
         <Route path="/create-trubute" element={<CreateTributePage />} />
         <Route path="/memorial/:website" element={<MemorialPage />} />
-
+        {/* Memorial Route */}
+        <Route path="/memorials/:idOrWebsite" element={<ViewMemorialPage />} />
         {/* <Route path="/plan" element={<ChoosePlan />} />
         <Route path="/privacy" element={<PrivacyOptions />} /> */}
 
