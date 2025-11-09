@@ -18,7 +18,7 @@ const ViewMemorialPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Base URL without trailing slash
-  const API_BASE = "http://localhost:3000";
+  const API_BASE =process.env.REACT_APP_API_BASE;
 
   useEffect(() => {
     if (!idOrWebsite) return;
@@ -42,7 +42,7 @@ const ViewMemorialPage: React.FC = () => {
     <div>
       <HeaderSection firstName={memorial.firstName} lastName={memorial.lastName} />
 
-      <div className="max-w-5xl mx-auto px-4 py-6">
+      <div className="max-w-5xl mx-auto px-4 py-6 grid-cols-3">
         <MemoryTabs firstName={memorial.firstName} lastName={memorial.lastName} />
       </div>
     </div>
